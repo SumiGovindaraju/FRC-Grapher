@@ -89,3 +89,6 @@ See [this](https://wpilib.screenstepslive.com/s/4485/m/24193/l/319135-ip-network
 
 ## Authors
 * Sumi Govindaraju
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
