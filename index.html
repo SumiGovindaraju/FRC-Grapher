@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>FRC Grapher</title>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/Chart.bundle.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">FRC Grapher</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#add-dataset-modal"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Dataset</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="saveConfig()"><i class="fas fa-save"></i>&nbsp;&nbsp;Save Configuration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="downloadScreenshot()"><i class="fas fa-camera"></i>&nbsp;&nbsp;Download Screenshot</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <label style="color: #fff;">Status:&nbsp;&nbsp;&nbsp;</label>
+                    <input id="status" class="form-control mr-sm-2" placeholder="Not Connected" aria-label="Search" disabled>
+                </form>
+                <i onclick="togglePausePlay()" style="color: #fff;" class="fas fa-pause"></i>
+            </div>
+        </nav>
+
+        <div style="width: 90%; margin: auto;">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="modal fade" id="add-dataset-modal" tabindex="-1" role="dialog" aria-labelledby="add-dataset-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="add-dataset-modal-label">Add Dataset</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="add-dataset-input">SmartDashboard Key</label>
+                                <input type="text" class="form-control" id="add-dataset-input" placeholder="Enter SmartDashboard key">
+                                <small id="emailHelp" class="form-text text-muted">Only graphs Number datatypes</small>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="addDataset()" data-dismiss="modal">Add Dataset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
