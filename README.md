@@ -30,6 +30,8 @@ To start the dummy NetworkTables server, run:
 $ python test_server.py
 ```
 
+For testing, start the Python WebSocket server, open `index.html`, and then start the dummy NetworkTables server last.
+
 To see a list of command-line arguments available, run:
 ```
 $ python main.py --help
@@ -80,6 +82,16 @@ $ python main.py -i [IP address of robot]
 ```
 
 See [this](https://wpilib.screenstepslive.com/s/4485/m/24193/l/319135-ip-networking-at-the-event) for information on your robot's IP address.
+
+## Screenshots
+FRC-Grapher in action:
+![FRC-Grapher in action](screenshots/screenshot1.png "FRC-Grapher in action")
+
+Adding a SmartDashboard Key:
+![Adding a SmartDashboard Key](screenshots/screenshot2.png "Adding a SmartDashboard Key")
+
+Downloadable Screenshot of Graph:
+![Downloadable Screenshot of Graph](screenshots/screenshot3.png "Downloadable Screenshot of Graph")
 
 ## Built With
 * [Chart.js](http://www.chartjs.org/) - Library used for graphing
