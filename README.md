@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 This requires [RobotPy NetworkTables](https://github.com/robotpy/pynetworktables) and [SimpleWebSocketServer](https://github.com/dpallot/simple-websocket-server). To install just run:
 ```
-$ pip install -r './requirements.txt'
+$ pip3 install -r './requirements.txt'
 ```
 
 ### Installing
@@ -22,19 +22,19 @@ Install prerequisites (see [Prerequisites](#prerequisites)). Then create a direc
 
 To run FRC-Grapher, start the Python WebSocket server and open `index.html`:
 ```
-$ python main.py
+$ ./main.py
 ```
 
 To start the dummy NetworkTables server, run:
 ```
-$ python test_server.py
+$ ./python test_server.py
 ```
 
 For testing, start the Python WebSocket server, open `index.html`, and then start the dummy NetworkTables server last.
 
 To see a list of command-line arguments available, run:
 ```
-$ python main.py --help
+$ ./main.py --help
 ```
 
 ## Usage
