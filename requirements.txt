@@ -1,2 +1,2 @@
-pynetworktables==2018.1.0
+pynetworktables==2019.0.2
 git+https://github.com/dpallot/simple-websocket-server.git@master#egg=SimpleWebSocketServer
